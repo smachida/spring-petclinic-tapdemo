@@ -17,7 +17,10 @@
 package org.springframework.samples.petclinic;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.actuate.trace.http.HttpTraceRepository;
+import org.springframework.boot.actuate.trace.http.InMemoryHttpTraceRepository;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 /**
  * PetClinic Spring Boot Application.
@@ -32,4 +35,8 @@ public class PetClinicApplication {
 		SpringApplication.run(PetClinicApplication.class, args);
 	}
 
+	@Bean
+	public HttpTraceRepository httpTraceRepository() {
+		return new InMemoryHttpTraceRepository();
+	}
 }
