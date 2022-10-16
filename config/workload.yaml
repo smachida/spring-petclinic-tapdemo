@@ -11,4 +11,4 @@ spec:
       url: https://github.com/smachida/spring-petclinic-tapdemo.git
       ref:
         branch: main
-        tag: tap-1.0
+        tag: tap-1.3
