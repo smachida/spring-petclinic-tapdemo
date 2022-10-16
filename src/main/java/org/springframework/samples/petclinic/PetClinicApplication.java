@@ -39,4 +39,5 @@ public class PetClinicApplication {
 	public HttpTraceRepository httpTraceRepository() {
 		return new InMemoryHttpTraceRepository();
 	}
+
 }
